@@ -1,0 +1,287 @@
+.container-banner {
+  width: 100%;
+
+  .slogan {
+    font-family: 'Poppins-Regular';
+    padding-top: 303px;
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .system-name {
+    position: relative;
+
+    .name {
+      position: relative;
+      font-family: 'Kanit-Bold';
+      margin-top: 34px;
+      font-size: 150px;
+      line-height: 195px;
+      text-align: center;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.41) 100%);
+      z-index: 1;
+    }
+
+    .bg-system-name {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -154px;
+      width: 308px;
+      height: 239px;
+    }
+  }
+
+  background: url('@/assets/images/bg_banner.png') no-repeat top center;
+  background-size: 100% auto;
+}
+
+.container-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 120px auto;
+  width: 277px;
+  height: 85px;
+  background: url('@/assets/images/bg_btn.png') no-repeat center center;
+  background-size: cover;
+  gap: 27px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  .btn-main-text {
+    font-family: 'Poppins-Regular';
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 36px;
+  }
+  .btn-sub-text {
+    font-family: 'Poppins-Regular';
+    font-size: 15px;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+}
+
+.container-skills {
+  display: flex;
+  margin: 0 auto;
+  width: var(--content-width);
+  height: 195px;
+  .skills-item {
+    width: 384px;
+    height: 195px;
+    &:last-child {
+      width: 427px;
+    }
+    .skills-icon {
+      width: 50px;
+      height: 50px;
+    }
+    .skills-title {
+      margin-top: 26px;
+      padding-left: 5px;
+      font-family: 'Poppins-Medium';
+      font-size: 22px;
+      color: #ffffff;
+      line-height: 40px;
+    }
+    .skills-desc {
+      margin-top: 16px;
+      padding-left: 5px;
+      font-family: 'Poppins-Regular';
+      font-size: 17px;
+      color: #ffffff;
+      line-height: 31px;
+    }
+  }
+}
+
+.container-excellence {
+  width: 100%;
+  padding-top: 180px;
+  background: url('@/assets/images/bg_excellence.png') no-repeat top center;
+  background-size: 100% 1274px;
+  .excellence-content {
+    margin: 0 auto;
+    width: var(--content-width);
+    .excellence-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .excellence-label {
+        font-family: 'Poppins-SemiBold';
+        width: 498px;
+        font-size: 40px;
+        color: #ffffff;
+        line-height: 60px;
+      }
+      .excellence-info {
+        width: 359px;
+        font-family: 'Poppins-Light';
+        font-size: 20px;
+        color: #ffffff;
+        line-height: 36px;
+      }
+    }
+    .excellence-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 64px;
+      width: 100%;
+      height: 615px;
+      background: #1d1b19;
+      border-radius: 8px;
+      overflow: hidden;
+      .card-content {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        height: 100%;
+        flex: 1;
+        padding: 126px 67px 0 99px;
+        flex-shrink: 0;
+        .card-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 172px;
+          height: 41px;
+          border-radius: 68px;
+          border: 2px solid rgba(41, 242, 167, 0.5);
+          font-family: 'Poppins-Medium';
+          font-size: 16px;
+          color: #29f2a7;
+        }
+        .card-label {
+          margin-top: 29px;
+          font-family: 'Poppins-SemiBold';
+          font-size: 36px;
+          color: #ffffff;
+          line-height: 60px;
+        }
+        .card-desc {
+          margin-top: 29px;
+          width: 544px;
+          font-family: 'Poppins-Light';
+          font-size: 20px;
+          color: #ffffff;
+          line-height: 40px;
+        }
+      }
+      .bg-card {
+        flex-shrink: 0;
+        width: 700px;
+        height: 100%;
+        background: url('@/assets/images/bg_excellence_card.png') no-repeat center center;
+        background-size: cover;
+      }
+    }
+
+    .excellence-product {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      margin-top: 74px;
+      width: 100%;
+      height: 643px;
+      padding: 75px 71px;
+      background: url('@/assets/images/bg_product.png') no-repeat center center;
+      background-size: cover;
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 172px;
+        height: 41px;
+        border-radius: 68px 68px 68px 68px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        font-family: 'Poppins-Medium';
+        font-size: 16px;
+        color: #ffffff;
+      }
+      .label {
+        font-family: 'Poppins-SemiBold';
+        font-size: 36px;
+        color: #ffffff;
+        line-height: 65px;
+      }
+      .desc {
+        font-family: 'Poppins-Regular';
+        margin-top: 15px;
+        font-size: 20px;
+        color: #ffffff;
+        line-height: 36px;
+      }
+    }
+
+    .excellence-solutions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 76px;
+      width: 100%;
+      gap: 50px;
+      .solutions-item {
+        height: 429px;
+        padding: 59px 71px 80px 77px;
+        .label {
+          font-family: 'Poppins-Bold';
+          font-size: 32px;
+          line-height: 58px;
+        }
+        .info {
+          margin-top: 30px;
+          height: 108px;
+          font-family: 'Poppins-Regular';
+          font-size: 20px;
+          line-height: 36px;
+        }
+        .second-label {
+          font-family: 'Poppins-Medium';
+          font-size: 20px;
+          line-height: 36px;
+        }
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 172px;
+          height: 41px;
+          border-radius: 55px;
+        }
+        &:first-child {
+          width: 800px;
+          background: url('@/assets/images/bg_solutions_interaction.png') no-repeat center center;
+          background-size: cover;
+          color: #ffffff;
+          .btn {
+            margin-top: 54px;
+            background: linear-gradient(90deg, #8c82ff 0%, #3f4eda 100%);
+          }
+        }
+        &:last-child {
+          width: 550px;
+          background: url('@/assets/images/bg_solutions_faster.png') no-repeat center center;
+          background-size: cover;
+          color: #000000;
+          .btn {
+            margin-top: 160px;
+            border: 2px solid rgba(255, 255, 255, 0.31);
+          }
+        }
+      }
+    }
+  }
+}

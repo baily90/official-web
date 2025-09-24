@@ -1,0 +1,3 @@
+<template>
+  pc about
+</template>

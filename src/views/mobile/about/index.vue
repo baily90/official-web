@@ -1,0 +1,3 @@
+<template>
+  mobile about
+</template>
