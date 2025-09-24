@@ -50,14 +50,7 @@
   background: url('@/assets/images/bg_btn.png') no-repeat center center;
   background-size: cover;
   gap: 27px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  &:hover {
-    transform: scale(1.05);
-  }
-  &:active {
-    transform: scale(0.95);
-  }
+
   .btn-main-text {
     font-family: 'Poppins-Regular';
     font-size: 20px;
@@ -80,6 +73,12 @@
   .skills-item {
     width: 384px;
     height: 195px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-10px);
+    }
+
     &:last-child {
       width: 427px;
     }
@@ -134,6 +133,7 @@
         line-height: 36px;
       }
     }
+
     .excellence-card {
       display: flex;
       align-items: center;
@@ -144,6 +144,8 @@
       background: #1d1b19;
       border-radius: 8px;
       overflow: hidden;
+      cursor: pointer;
+
       .card-content {
         display: flex;
         flex-flow: column nowrap;
@@ -152,6 +154,10 @@
         flex: 1;
         padding: 126px 67px 0 99px;
         flex-shrink: 0;
+        transition: all 0.3s ease;
+        &:hover {
+          padding: 100px 67px 0 99px;
+        }
         .card-btn {
           display: flex;
           align-items: center;
@@ -185,7 +191,12 @@
         width: 700px;
         height: 100%;
         background: url('@/assets/images/bg_excellence_card.png') no-repeat center center;
-        background-size: cover;
+        background-size: 100%;
+        transition: all 0.3s ease;
+        &:hover {
+          background: url('@/assets/images/bg_excellence_card.png') no-repeat center center;
+          background-size: 105%;
+        }
       }
     }
 
@@ -198,7 +209,14 @@
       height: 643px;
       padding: 75px 71px;
       background: url('@/assets/images/bg_product.png') no-repeat center center;
-      background-size: cover;
+      background-size: 100%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        padding: 50px 71px;
+        background: url('@/assets/images/bg_product.png') no-repeat center center;
+        background-size: 105%;
+      }
       .btn {
         display: flex;
         align-items: center;
@@ -233,9 +251,18 @@
       margin-top: 76px;
       width: 100%;
       gap: 50px;
+
       .solutions-item {
         height: 429px;
         padding: 59px 71px 80px 77px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        overflow: hidden;
+        &:hover {
+          padding: 40px 71px 80px 77px;
+        }
+
         .label {
           font-family: 'Poppins-Bold';
           font-size: 32px;
@@ -260,12 +287,16 @@
           width: 172px;
           height: 41px;
           border-radius: 55px;
+          font-size: 16px;
         }
         &:first-child {
           width: 800px;
           background: url('@/assets/images/bg_solutions_interaction.png') no-repeat center center;
-          background-size: cover;
+          background-size: 100%;
           color: #ffffff;
+          &:hover {
+            background-size: 105%;
+          }
           .btn {
             margin-top: 54px;
             background: linear-gradient(90deg, #8c82ff 0%, #3f4eda 100%);
@@ -274,8 +305,11 @@
         &:last-child {
           width: 550px;
           background: url('@/assets/images/bg_solutions_faster.png') no-repeat center center;
-          background-size: cover;
+          background-size: 100%;
           color: #000000;
+          &:hover {
+            background-size: 150%;
+          }
           .btn {
             margin-top: 160px;
             border: 2px solid rgba(255, 255, 255, 0.31);
@@ -283,5 +317,127 @@
         }
       }
     }
+
+    .excellence-innovation {
+      margin-top: 175px;
+      width: 100%;
+      text-align: center;
+      .tips {
+        font-family: 'Poppins-Regular';
+        font-size: 16px;
+        color: #FFFFFF;
+        line-height: 20px;
+        text-align: center;
+      }
+      .label {
+        margin-top: 20px;
+        font-family: 'Poppins-Bold';
+        font-size: 52px;
+        line-height: 78px;
+        text-align: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to bottom, #FFFFFF 33%, rgba(255,255,255,0.67) 100%);
+      }
+      .img-wrap {
+        position: relative;
+        margin-top: 102px;
+        height: 603px;
+        cursor: pointer;
+
+        &:hover {
+          img {
+            &:first-child {
+              transform: translateY(-20px)
+            }
+            &:nth-child(2) {
+              transform: translateX(60px) translateY(60px) rotate((15deg));
+            }
+            &:last-child {
+            transform: translateX(-60px) translateY(60px) rotate((-5deg)) ;
+          }
+          }
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          margin-left: -401.5px;
+          width: 803px;
+          height: 450px;
+          transition: all 0.3s ease;
+
+          &:first-child {
+            transform: rotate((0deg));
+            z-index: 3;
+          }
+          &:nth-child(2) {
+            transform: translateX(50px) translateY(50px) rotate((10deg));
+            z-index: 2;
+          }
+          &:last-child {
+            transform: translateX(-50px) translateY(60px) rotate((-10deg)) ;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
   }
+
+  .footer-wrap {
+    width: 100%;
+    padding-top: 383px;
+
+    background: url('@/assets/images/bg_footer.png') no-repeat top center;
+    background-size: cover;
+    .footer {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      padding: 150px 285px 225px;
+      background: #090A07;
+      .logo {
+        font-family: 'Kanit-Bold';
+        font-size: 38px;
+        line-height: 49px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.41) 100%);
+      }
+      .detail {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 425px;
+        gap: 100px;
+        .detail-item {
+          .detail-item-info {
+            margin: 2px 0;
+            font-family: 'Poppins-Regular';
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 29px;
+            opacity: 0.6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover {
+              opacity: 1;
+            }
+            &:first-child {
+              margin-bottom: 29px;
+              font-family: 'Poppins-SemiBold';
+              font-size: 18px;
+              color: #FFFFFF;
+              line-height: 37px;
+              opacity: 1;
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
 }

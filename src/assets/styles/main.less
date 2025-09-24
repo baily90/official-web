@@ -37,3 +37,17 @@ html {
 ::-webkit-scrollbar {
   display: none; /* Chrome Safari */
 }
+img {
+  user-select: none;
+}
+
+.transition-hover {
+  cursor: pointer;
+  transition: all 0.1s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

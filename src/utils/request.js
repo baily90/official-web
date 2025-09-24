@@ -3,10 +3,6 @@ import axios from 'axios'
 const request = axios.create({
   timeout: 30 * 1000,
 })
-ElMessage({
-  message: '123',
-  type: 'error',
-})
 request.interceptors.request.use((config) => {
   // 请求拦截
   config.url = `${import.meta.env.VITE_API_URL}${config.url}`
@@ -29,7 +25,7 @@ request.interceptors.response.use(
   },
   (error) => {
     ElMessage({
-      message: err.message || '服务器异常',
+      message: error.message || '服务器异常',
       type: 'error',
     })
     return Promise.reject(error.message || '服务器异常')
