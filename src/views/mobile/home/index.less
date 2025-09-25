@@ -20,6 +20,7 @@
       font-size: 60px;
       line-height: 97px;
       text-align: center;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.41) 100%);
@@ -36,7 +37,7 @@
     }
   }
   background: url('@/assets/images/bg_banner.png') no-repeat top center;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .container-btn {
@@ -92,15 +93,14 @@
       font-size: 8px;
       color: #ffffff;
       line-height: 15px;
+      opacity: 0.8;
     }
   }
 }
 
 .container-excellence {
   width: 100%;
-  padding-top: 90px;
-  background: url('@/assets/images/bg_excellence.png') no-repeat top center;
-  background-size: 100% auto;
+
   .excellence-content {
     margin: 0 auto;
     width: var(--content-width);
@@ -109,6 +109,9 @@
       flex-flow: column nowrap;
       align-items: center;
       width: 100%;
+      padding: 90px 0 32px;
+      background: url('@/assets/images/bg_excellence.png') no-repeat top center;
+      background-size: 100% auto;
       .excellence-label {
         font-family: 'Poppins-SemiBold';
         width: 250px;
@@ -125,6 +128,7 @@
         color: #ffffff;
         line-height: 18px;
         text-align: center;
+        opacity: 0.8;
       }
     }
 
@@ -132,7 +136,6 @@
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
-      margin-top: 32px;
       width: 100%;
       background: #1d1b19;
       border-radius: 4px;
@@ -174,6 +177,7 @@
           font-size: 10px;
           color: #ffffff;
           line-height: 20px;
+          opacity: 0.8;
         }
       }
       .bg-card {
@@ -218,6 +222,7 @@
         font-size: 10px;
         color: #ffffff;
         line-height: 20px;
+        opacity: 0.8;
       }
     }
 
@@ -243,6 +248,7 @@
           font-family: 'Poppins-Regular';
           font-size: 10px;
           line-height: 18px;
+          opacity: 0.8;
         }
         .second-label {
           font-family: 'Poppins-Medium';
@@ -293,6 +299,7 @@
         color: #ffffff;
         line-height: 10px;
         text-align: center;
+        opacity: 0.8;
       }
       .label {
         margin-top: 10px;
@@ -300,6 +307,7 @@
         font-size: 28px;
         line-height: 39px;
         text-align: center;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-image: linear-gradient(to bottom, #ffffff 33%, rgba(255, 255, 255, 0.67) 100%);
@@ -307,16 +315,53 @@
       .img-wrap {
         position: relative;
         margin-top: 51px;
-        height: 240px;
+        height: 220px;
 
-        img {
+        &:hover {
+          .img {
+            &:first-child {
+              transform: translateY(-10px);
+            }
+            &:nth-child(2) {
+              transform: translateX(30px) translateY(30px) rotate((15deg));
+            }
+            &:last-child {
+              transform: translateX(-30px) translateY(30px) rotate((-5deg));
+            }
+          }
+        }
+
+        .img {
           position: absolute;
           top: 0;
           left: 50%;
           margin-left: -150px;
           width: 300px;
-          height: auto;
+          height: 170px;
           transition: all 0.3s ease;
+          .info {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding-bottom: 10px;
+            .img-lable {
+              font-family: 'Poppins-Medium';
+              font-size: 11px;
+              color: #ffffff;
+              line-height: 18px;
+              text-align: center;
+            }
+            .img-desc {
+              font-family: 'Poppins-Light';
+              margin: 8px auto 0;
+              width: 180px;
+              font-size: 8px;
+              color: #ffffff;
+              line-height: 12px;
+              opacity: 0.8;
+            }
+          }
 
           &:first-child {
             transform: rotate((0deg));
@@ -352,6 +397,7 @@
         font-family: 'Kanit-Bold';
         font-size: 19px;
         line-height: 24px;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.41) 100%);

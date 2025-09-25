@@ -28,7 +28,7 @@ const router = createRouter({
           name: 'PCHome',
           component: () => import('@/views/pc/home/index.vue'),
           meta: {
-            title: '首页',
+            title: 'Official',
           },
         },
         {
@@ -36,7 +36,7 @@ const router = createRouter({
           name: 'PCAbout',
           component: () => import('@/views/pc/about/index.vue'),
           meta: {
-            title: '关于',
+            title: 'About',
           },
         },
       ],
@@ -53,7 +53,7 @@ const router = createRouter({
           name: 'MobileHome',
           component: () => import('@/views/mobile/home/index.vue'),
           meta: {
-            title: '首页',
+            title: 'Official',
           },
         },
         {
@@ -61,7 +61,7 @@ const router = createRouter({
           name: 'MobileAbout',
           component: () => import('@/views/mobile/about/index.vue'),
           meta: {
-            title: '关于',
+            title: 'About',
           },
         },
       ],
@@ -70,7 +70,7 @@ const router = createRouter({
       path: '/:pathMatch(.*)*',
       component: () => import('@/views/error/index.vue'),
       meta: {
-        title: '页面不存在',
+        title: 'not found',
         type: 'both',
       },
     },
@@ -79,7 +79,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   NProgress.start()
-  title.value = to.meta.title
+  title.value = `${import.meta.env.VITE_APP_TITLE}  ${to.meta.title || ''}`
   let path = to.fullPath
   if (isMobile() && to.meta.type === 'pc') {
     path = path.replace('/p', '/m')

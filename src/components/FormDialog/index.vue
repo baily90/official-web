@@ -1,23 +1,22 @@
 <template>
-  <el-dialog v-model="visible" title="Contact Us" destroy-on-close center width="500px"
+  <el-dialog v-model="visible" title="Contact Us" destroy-on-close center :width="diagConfig.width"
     border="1px solid [var(--el-border-color)]">
 
-    <el-form ref="formRef" size="large" :model="formData" :rules="formRules" label-width="auto">
-      <el-form-item label="name" prop="name">
-        <el-input v-model="formData.name" placeholder="name" />
+    <el-form ref="formRef" :size="diagConfig.size" :model="formData" :rules="formRules" label-width="auto">
+      <el-form-item label="Name" prop="name">
+        <el-input v-model="formData.name" placeholder="Please input name" />
       </el-form-item>
-      <el-form-item label="email" prop="email">
-        <el-input v-model="formData.email" placeholder="email" />
+      <el-form-item label="Email" prop="email">
+        <el-input v-model="formData.email" placeholder="Please input email" />
       </el-form-item>
-      <el-form-item label="content" prop="content">
+      <el-form-item label="Content" prop="content">
         <el-input type="textarea" :rows="5" :maxlength="200" show-word-limit v-model="formData.content"
-          placeholder="content" />
+          placeholder="Please input content" />
       </el-form-item>
     </el-form>
 
     <template #footer>
-      <el-button v-throttle :auto-insert-space="true" @click="onSubmmit" :loading="loading">提交</el-button>
-      <el-button @click="close" v-throttle :auto-insert-space="true">关闭</el-button>
+      <el-button v-throttle @click="onSubmmit" :loading="loading">submit</el-button>
     </template>
   </el-dialog>
 </template>
@@ -25,6 +24,7 @@
 <script setup>
 import { contact } from '@/api/index'
 
+const diagConfig = ref({ width: '500px', size: 'large' })
 const visible = ref(false)
 const formRef = ref(null)
 const loading = ref(false)
@@ -40,7 +40,7 @@ const formRules = {
     { required: true, message: 'Please input name', trigger: 'blur' }
   ],
   email: [
-    { required: true, message: 'Please input content', trigger: 'blur' },
+    { required: true, message: 'Please input email', trigger: 'blur' },
     { type: 'email', message: 'Please input correct email address', trigger: 'blur' }
   ],
   content: [
@@ -48,11 +48,8 @@ const formRules = {
   ],
 }
 
-const close = () => {
-  visible.value = false
-}
-
-const open = async () => {
+const open = async (config) => {
+  diagConfig.value = { ...diagConfig.value, ...config }
   visible.value = true
   resetForm()
 }

@@ -92,9 +92,27 @@
           </div>
           <div class="label wow fadeInUp" data-wow-delay="0.4s">Innovation <br />without compromise </div>
           <div class="img-wrap wow fadeInUp">
-            <img src="@/assets/images/img_innovation_card1.png" alt="">
-            <img src="@/assets/images/img_innovation_card1.png" alt="">
-            <img src="@/assets/images/img_innovation_card1.png" alt="">
+            <div class="img">
+              <img src="@/assets/images/img_innovation_card1.png" alt=""></img>
+              <div class="info">
+                <div class="img-lable">Local-Based Intelligence</div>
+                <div class="img-desc">Trusted by government agencies and international governance organizations</div>
+              </div>
+            </div>
+            <div class="img">
+              <img src="@/assets/images/bg_excellence_card.png" alt=""></img>
+              <div class="info">
+                <div class="img-lable">Local-Based Intelligence</div>
+                <div class="img-desc">Trusted by government agencies and international governance organizations</div>
+              </div>
+            </div>
+            <div class="img">
+              <img src="@/assets/images/bg_product.png" alt=""></img>
+              <div class="info">
+                <div class="img-lable">Local-Based Intelligence</div>
+                <div class="img-desc">Trusted by government agencies and international governance organizations</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -140,7 +158,7 @@ import FormDialog from '@/components/FormDialog/index.vue'
 const formDialogRef = ref(null)
 
 const onFormDialogOpen = () => {
-  formDialogRef.value?.open()
+  formDialogRef.value?.open({ size: 'large', width: '500px' })
 }
 </script>
 
