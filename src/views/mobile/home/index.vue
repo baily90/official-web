@@ -3,12 +3,13 @@
     <div class="container-banner">
       <div class="slogan wow fadeInDown" data-wow-delay="0.2s">llluminating Insight, <br />Empowering Wisdom</div>
       <div class="system-name">
-        <div class="name wow fadeInUp" data-wow-delay="0.5s">Lucentia AI</div>
-        <img class="bg-system-name wow fadeIn" data-wow-delay="0.5s" src="@/assets/images/bg_system_name.png" alt="">
+        <img class="icon-system-name wow fadeInUp" data-wow-delay="0.8s" src="@/assets/images/icon_system_name.png"
+          alt="">
+        <img class="bg-system-name wow fadeIn" data-wow-delay="0.3s" src="@/assets/images/bg_system_name.png" alt="">
       </div>
     </div>
 
-    <div class="container-btn transition-hover wow fadeInUp" data-wow-delay="0.8s" @click="onFormDialogOpen">
+    <div class="container-btn transition-hover wow fadeInUp" data-wow-delay="1s" @click="onFormDialogOpen">
       <img class="w-[21px] h-[21px]" src="@/assets/images/icon_email.png" alt="">
       <div>
         <div class="btn-main-text">Contact Us</div>
@@ -100,18 +101,10 @@
               </div>
             </div>
             <div class="img">
-              <img src="@/assets/images/bg_excellence_card.png" alt=""></img>
-              <div class="info">
-                <div class="img-lable">Local-Based Intelligence</div>
-                <div class="img-desc">Trusted by government agencies and international governance organizations</div>
-              </div>
+              <img src="@/assets/images/img_innovation_card2.png" alt=""></img>
             </div>
             <div class="img">
-              <img src="@/assets/images/bg_product.png" alt=""></img>
-              <div class="info">
-                <div class="img-lable">Local-Based Intelligence</div>
-                <div class="img-desc">Trusted by government agencies and international governance organizations</div>
-              </div>
+              <img src="@/assets/images/img_innovation_card3.png" alt=""></img>
             </div>
           </div>
         </div>
@@ -119,7 +112,7 @@
 
       <div class="footer-wrap">
         <div class="footer">
-          <div class="logo wow fadeIn">Lucentia AI</div>
+          <img class="logo wow fadeIn" src="@/assets/images/icon_system_name_small.png" alt="">
           <div class="detail">
             <div class="detail-item">
               <div class="detail-item-info">Company</div>
