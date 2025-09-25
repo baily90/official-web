@@ -107,31 +107,31 @@
               <div class="detail-item-info">Company</div>
               <div class="detail-item-info">About Us</div>
               <div class="detail-item-info">Contact Us</div>
-              <div class="detail-item-info"">Terms of Service</div>
+              <div class="detail-item-info">Terms of Service</div>
             </div>
 
             <div class=" detail-item">
-                <div class="detail-item-info">Services</div>
-                <div class="detail-item-info">Development</div>
-                <div class="detail-item-info">Consulting</div>
-              </div>
+              <div class="detail-item-info">Services</div>
+              <div class="detail-item-info">Development</div>
+              <div class="detail-item-info">Consulting</div>
+            </div>
 
-              <div class="detail-item">
-                <div class="detail-item-info">Connect</div>
-                <div class="detail-item-info">Facebook</div>
-                <div class="detail-item-info">Linkedin</div>
-                <div class="detail-item-info">Twitter</div>
-                <div class="detail-item-info">Instagram</div>
-              </div>
+            <div class="detail-item">
+              <div class="detail-item-info">Connect</div>
+              <div class="detail-item-info">Facebook</div>
+              <div class="detail-item-info">Linkedin</div>
+              <div class="detail-item-info">Twitter</div>
+              <div class="detail-item-info">Instagram</div>
             </div>
           </div>
         </div>
-
-
       </div>
 
+
     </div>
-    <FormDialog ref="formDialogRef" />
+
+  </div>
+  <FormDialog ref="formDialogRef" />
 </template>
 
 <script setup>

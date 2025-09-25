@@ -4,7 +4,7 @@
       <div class="slogan wow fadeInDown" data-wow-delay="0.2s">llluminating Insight, <br />Empowering Wisdom</div>
       <div class="system-name">
         <div class="name wow fadeInUp" data-wow-delay="0.5s">Lucentia AI</div>
-        <img class="bg-system-name wow fadeIn" data-wow-delay="0.5s" src="@/assets/images/bg_system_name.png" alt="">
+        <img class="bg-system-name wow fadeIn" data-wow-delay="0.3s" src="@/assets/images/bg_system_name.png" alt="">
       </div>
     </div>
 
